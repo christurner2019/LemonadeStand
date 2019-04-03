@@ -42,10 +42,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChildFemale.cs" />
+    <Compile Include="ChildMale.cs" />
     <Compile Include="customer.cs" />
     <Compile Include="day.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="inventory.cs" />
+    <Compile Include="MidAgedMan.cs" />
+    <Compile Include="MidAgedWoman.cs" />
+    <Compile Include="OldMan.cs" />
+    <Compile Include="OldWoman.cs" />
     <Compile Include="player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

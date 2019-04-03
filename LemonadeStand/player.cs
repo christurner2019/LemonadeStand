@@ -7,8 +7,11 @@ namespace LemonadeStand
 {
     public class player
     {
+        //member variables (has a….also defined as attributes of the class)
         private int DailyProfit;
         private int RunningProfit;
+
+        //constructor (build this thing)(constructor initializes our variables)
 
         public inventory inventory
         {

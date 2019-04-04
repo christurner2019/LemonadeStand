@@ -8,7 +8,7 @@ namespace LemonadeStand
     public class weather
     {
         //member variables (has a….also defined as attributes of the class)
-        private string WeatherForWeek;
+        
         private string WeatherForDay;
         private string ForecastWeatherForDay;
         private string ForecastWeatherForWeek;
@@ -31,7 +31,8 @@ namespace LemonadeStand
         }
 
         //member methods
-        public void WeatherType()
+      
+        public void GetWeatherType()
         {
             Random rng = new Random();
             condition = WeatherType1[rng.Next(0, 3)];
@@ -42,20 +43,35 @@ namespace LemonadeStand
             todaysTemp = rng.Next(lowerTempRange, UpperTempRange);
         }
 
-        public void DisplayWeatherForWeek()
-        {
-            throw new System.NotImplementedException();
-        }
+     
 
         public void DisplayForecastWeatherDay()
         {
-            throw new System.NotImplementedException();
+            GetWeatherType();
+            SetTemp();
+            Console.WriteLine("The weather will be " + condition + " The temperature will be " + todaysTemp);
+
         }
 
         public void DisplayForecastWeatherWeek()
         {
-            throw new System.NotImplementedException();
+            for (int i = 0; i < 7; i++)
+            {
+                DisplayForecastWeatherDay();
+            }
         }
+
+
+        public void DisplayWeatherForDay()
+        {
+            Random rng = new Random();
+            DisplayForecastWeatherDay();
+            Console.WriteLine("The weather is " + condition + " The temperature is " + todaysTemp);
+        }
+
+
+
+
 
         //need to write a list containing the three choices for weather
         //and a random generator to output the weather forecast and then the actual weather for each day. 

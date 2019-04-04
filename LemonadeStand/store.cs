@@ -16,17 +16,17 @@ namespace LemonadeStand
 
         public void BuyLemonadeKitSunny()
         {
-            throw new System.NotImplementedException();
+            
         }
 
         public void BuyLemonadeKitRainy()
         {
-            throw new System.NotImplementedException();
+          
         }
 
-        public void BuyLemonadeKitRainy()
-        {
-            throw new System.NotImplementedException();
-        }
+        //public void BuyLemonadeKitRainy()
+        //{
+            
+        //}
     }
 }

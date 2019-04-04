@@ -12,22 +12,47 @@ namespace LemonadeStand
         public player Player;
         public customer Customer;
         public store Store;
+        public day Day;
+
+        //constructor
 
         public Game()
         {
+           
+                List<string> Days = new List<string>();
+                Days.Add("Monday");
+                Days.Add("Tuesday");
+                Days.Add("Wednesday");
+                Days.Add("Thursday");
+                Days.Add("Friday");
+                Days.Add("Saturday");
+                Days.Add("Sunday");
+
+            
 
         }
 
+        
+
+        
+        
+        //methods
         public void RunGame()
         {
-            throw new System.NotImplementedException();
-        
-        
-            Console.WriteLine("Welcome to the Lemondade Stand Game. Your goal is to make as much profit as possible. You will do this by" +
-                            "making smart choices with your inventory and tweaking your recipe so it is popular with your customers. You will need to" + 
-                            "monitor the weather as well and base your inventory on the current weather. You will purchase inventory before every new work day" +
-                            "can start. Pay attention to what works and adjust accordingly. Go make some money!!" );
-          }
+            Console.WriteLine($"Welcome to the Lemondade Stand Game. Your goal is to make as much profit as possible. You will do this by " +
+                            "making smart choices with your inventory and tweaking your recipe so it is popular with your customers. You will need to " +
+                            "monitor the weather as well and base your inventory on the current weather. You will purchase inventory before every new work day " +
+                            "can start. Pay attention to what works and adjust accordingly. Go make some money!!");
+                        BuildDays();
+                        DisplayForecastWeatherDay();
+                        Console.ReadLine();
+
+
+
+
+
+
+        }
         public void BuildDays()
         {
             Days = new List<day>();
@@ -36,6 +61,7 @@ namespace LemonadeStand
                 day day = new day();
                 Days.Add(day);
                 Days[i].RunDay();
+                Console.WriteLine("This is day: {Days}");
             }
             
         }

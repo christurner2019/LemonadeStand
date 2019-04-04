@@ -12,29 +12,34 @@ namespace LemonadeStand
         private int DurationGame;
         private int HoursOfOper;
         public weather weather;
+        public string Days;
 
         //constructor (build this thing)(constructor initializes our variables)
         public day()
         {
             weather = new weather();
         }
+        
+        
 
 
+       
 
         public void DisplayDay()
         {
-            throw new System.NotImplementedException();
-            DayOfWeek[] days =
+           
+            
             {
-                DayOfWeek.Monday,
-                DayOfWeek.Tuesday,
-                DayOfWeek.Wednesday,
-                DayOfWeek.Thursday,
-                DayOfWeek.Friday,
-                DayOfWeek.Saturday,
-                DayOfWeek.Sunday,
+                List<string> Days = new List<string>();
+                Days.Add("Monday");
+                Days.Add("Tuesday");
+                Days.Add("Wednesday");
+                Days.Add("Thursday");
+                Days.Add("Friday");
+                Days.Add("Saturday");
+                Days.Add("Sunday");
 
-            };
+            }
         }
 
         public void CalcDurationGame()

@@ -16,8 +16,8 @@ namespace LemonadeStand
         static void Main(string[] args)
         {
 
-            //Game game = new Game();
-            //game.RunGame();
+            Game game = new Game();
+            game.RunGame();
 
             Recipe recipe = new Recipe();
             recipe.DisplayCurrentRecipe();
@@ -25,6 +25,10 @@ namespace LemonadeStand
             recipe.ChangeRecipe();
             recipe.DisplayCurrentRecipe();
 
+            day day = new day();
+            day.DisplayDay();
+
+            
             Console.ReadKey();
         }
     }

@@ -10,16 +10,18 @@ namespace LemonadeStand
         //member variables (has a….also defined as attributes of the class)
         private int DailyProfit;
         private int RunningProfit;
+        private decimal CurrentMoney;
+        public inventory inventory;
+
 
         //constructor (build this thing)(constructor initializes our variables)
 
-        public inventory inventory
+        public player()
         {
-            get => default(inventory);
-            set
-            {
-            }
+            inventory = new inventory();
         }
+
+       
 
         public void DisplayDailyProfit()
         {
@@ -29,6 +31,11 @@ namespace LemonadeStand
         public void DisplayRunningProfit()
         {
             throw new System.NotImplementedException();
+        }
+
+        public void DisplayCurrentMoney()
+        {
+            
         }
     }
 }

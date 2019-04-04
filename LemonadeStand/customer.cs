@@ -9,17 +9,17 @@ namespace LemonadeStand
     {
         //member variables (has a….also defined as attributes of the class)
         private int CriteriaForPurchase;
-        private int CupPurchase;
+        private int CupOfLemondade;
 
         //constructor (build this thing)(constructor initializes our variables)
-        public void BuyCup()
+        public void BuyCupOfLemondade()
         {
-            throw new System.NotImplementedException();
+            //this needs to add money to DisplayCurrentMoney based on PriceDuringGame
         }
 
         public void CalculateCriteria()
         {
-            throw new System.NotImplementedException();
+            
         }
     }
 }

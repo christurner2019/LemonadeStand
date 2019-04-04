@@ -24,9 +24,14 @@ namespace LemonadeStand
           
         }
 
+        public void BuyLemonadeKitCloudy()
+        {
+            throw new System.NotImplementedException();
+        }
+
         //public void BuyLemonadeKitRainy()
         //{
-            
+
         //}
     }
 }

@@ -15,9 +15,17 @@ namespace LemonadeStand
 
         static void Main(string[] args)
         {
-           
-             Game game = new Game();
-             game.RunGame();
+
+            //Game game = new Game();
+            //game.RunGame();
+
+            Recipe recipe = new Recipe();
+            recipe.DisplayCurrentRecipe();
+
+            recipe.ChangeRecipe();
+            recipe.DisplayCurrentRecipe();
+
+            Console.ReadKey();
         }
     }
 }

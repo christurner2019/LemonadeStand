@@ -19,14 +19,7 @@ namespace LemonadeStand
         public Game()
         {
            
-                List<string> Days = new List<string>();
-                Days.Add("Monday");
-                Days.Add("Tuesday");
-                Days.Add("Wednesday");
-                Days.Add("Thursday");
-                Days.Add("Friday");
-                Days.Add("Saturday");
-                Days.Add("Sunday");
+                
 
             
 
@@ -44,7 +37,7 @@ namespace LemonadeStand
                             "monitor the weather as well and base your inventory on the current weather. You will purchase inventory before every new work day " +
                             "can start. Pay attention to what works and adjust accordingly. Go make some money!!");
                         BuildDays();
-                        DisplayForecastWeatherDay();
+                        //DisplayForecastWeatherDay();
                         Console.ReadLine();
 
 
@@ -61,7 +54,7 @@ namespace LemonadeStand
                 day day = new day();
                 Days.Add(day);
                 Days[i].RunDay();
-                Console.WriteLine("This is day: {Days}");
+                Console.WriteLine("This is day: {DisplayDay}");
             }
             
         }

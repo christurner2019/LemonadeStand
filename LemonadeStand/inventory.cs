@@ -17,7 +17,7 @@ namespace LemonadeStand
 
         public void DisplayInv()
         {
-            throw new System.NotImplementedException();
+            
             {
                 Console.WriteLine("CupsOfSugarInv", "LemonsInInv", "IceCubesInv",
                     "DrinkCupsInInv");

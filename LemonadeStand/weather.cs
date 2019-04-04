@@ -9,21 +9,21 @@ namespace LemonadeStand
     {
         //member variables (has a….also defined as attributes of the class)
         
-        private string WeatherForDay;
-        private string ForecastWeatherForDay;
-        private string ForecastWeatherForWeek;
+        //private string WeatherForDay;
+        //private string ForecastWeatherForDay;
+        //private string ForecastWeatherForWeek;
         string condition;
         int todaysTemp;
         private int lowerTempRange = 60;
         private int UpperTempRange = 90;
         private List<string> WeatherType1;
 
-        //constructor (build this thing)(constructor initializes our variables)
+        //constructor (build this thing)(constructor initializes our variables)ge
         public weather()
         {
             WeatherType1 = new List<string>() { "sunny", "rainy", "cloudy" };
-            WeatherType();
-            SetTemp();
+            //WeatherType();
+            //SetTemp();
 
 
 
@@ -45,7 +45,7 @@ namespace LemonadeStand
 
      
 
-        public void DisplayForecastWeatherDay()
+        public void GetDaysWeather()
         {
             GetWeatherType();
             SetTemp();
@@ -57,17 +57,16 @@ namespace LemonadeStand
         {
             for (int i = 0; i < 7; i++)
             {
-                DisplayForecastWeatherDay();
+                GetDaysWeather();
             }
         }
 
 
-        public void DisplayWeatherForDay()
-        {
-            Random rng = new Random();
-            DisplayForecastWeatherDay();
-            Console.WriteLine("The weather is " + condition + " The temperature is " + todaysTemp);
-        }
+        //public void DisplayWeatherForDay()
+        //{
+        //    Random rng = new Random();
+        //    Console.WriteLine(DisplayDay ":The weather is" + condition + "The temperature is" + todaysTemp);
+        //}
 
 
 

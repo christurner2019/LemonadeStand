@@ -19,16 +19,17 @@ namespace LemonadeStand
             Game game = new Game();
             game.RunGame();
 
+            
+
             Recipe recipe = new Recipe();
             recipe.DisplayCurrentRecipe();
 
             recipe.ChangeRecipe();
             recipe.DisplayCurrentRecipe();
 
-            //day day = new day();
-            //day.DisplayDay();
-
             
+
+
             Console.ReadKey();
         }
     }

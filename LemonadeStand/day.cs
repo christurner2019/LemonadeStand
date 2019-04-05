@@ -27,23 +27,22 @@ namespace LemonadeStand
         public void DisplayDay()
         {
             {
+                List<string> Days = new List<string>() { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
+
+               // DateTime now = DateTime.Today;
+                for (int i = 0; i < 7; i++)
+                {
+                    string result = weather.GetDaysWeather();
+                    Console.WriteLine(Days[i] + result);
+                    //call next function
+                    //call next function
+                }
+                
                 
             
 
             
-                List<string> Days = new List<string>();
-                Days.Add("Monday");
-                Days.Add("Tuesday");
-                Days.Add("Wednesday");
-                Days.Add("Thursday");
-                Days.Add("Friday");
-                Days.Add("Saturday");
-                Days.Add("Sunday");
-
-                Console.WriteLine("Today is" + Days);
-                Days.ForEach(Console.WriteLine);
-
-                for (int i = 0; i < 7; i++);
+           
 
                
             }

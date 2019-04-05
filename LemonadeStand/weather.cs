@@ -17,6 +17,7 @@ namespace LemonadeStand
         private int lowerTempRange = 60;
         private int UpperTempRange = 90;
         private List<string> WeatherType1;
+        string totalWeather;
 
         //constructor (build this thing)(constructor initializes our variables)ge
         public weather()
@@ -45,12 +46,14 @@ namespace LemonadeStand
 
      
 
-        public void GetDaysWeather()
+        public string GetDaysWeather()
         {
             GetWeatherType();
             SetTemp();
-            Console.WriteLine("The weather will be " + condition + " The temperature will be " + todaysTemp);
-
+            totalWeather = ("The weather will be " + condition + " and the temperature will be " + todaysTemp + ".");
+            return totalWeather;
+            //string weatherStatement = "The weather will be " + condition + " The temperature will be " + todaysTemp;
+            //return weatherStatement;
         }
 
         public void DisplayForecastWeatherWeek()

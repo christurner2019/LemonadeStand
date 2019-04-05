@@ -14,23 +14,23 @@ namespace LemonadeStand
         public store Store;
         public day Day;
 
-       
+
 
         //constructor
 
         public Game()
         {
-           
-                
 
-            
+
+
+
 
         }
 
-        
 
-        
-        
+
+
+
         //methods
         public void RunGame()
         {
@@ -38,9 +38,9 @@ namespace LemonadeStand
                             "making smart choices with your inventory and tweaking your recipe so it is popular with your customers. You will need to " +
                             "monitor the weather as well and base your inventory on the current weather. You will purchase inventory before every new work day " +
                             "can start. Pay attention to what works and adjust accordingly. Go make some money!!");
-                        BuildDays();
-                        //DisplayForecastWeatherWeek();
-                        Console.ReadLine();
+            BuildDays();
+            //DisplayForecastWeatherWeek();
+            Console.ReadLine();
 
 
 
@@ -49,23 +49,54 @@ namespace LemonadeStand
 
         }
 
-     
+
 
         public void BuildDays()
         {
             Days = new List<day>();
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i <= 7; i++)
             {
                 day day = new day();
+                switch (i)
+                {
+                    case 1:
+                        day.DayOfWeek = "Monday";
+                        break;
+                    case 2:
+                        day.DayOfWeek = "Tuesday";
+                        break;
+                    case 3:
+                        day.DayOfWeek = "Wednesday";
+                        break;
+                    case 4:
+                        day.DayOfWeek = "Thursday";
+                        break;
+                    case 5:
+                        day.DayOfWeek = "Friday";
+                        break;
+                    case 6:
+                        day.DayOfWeek = "Saturday";
+                        break;
+                    case 7:
+                        day.DayOfWeek = "Sunday";
+                        break;
+
+                    default:
+                        break;
+                }
                 Days.Add(day);
                 Days[i].RunDay();
-                Console.WriteLine("Today is:" );
+                Console.WriteLine("Today is: " + day.DayOfWeek);
                 Console.ReadLine();
-            }
-            
-        }
-    }
 
+                //for (int i = 0; i < Days.Count; i++)
+                //{
+                //    Console.WriteLine(Days[i].DayOfWeek + " " + Days[i].weather.Temperature);
+                //}
+            }
+        }
+
+    }
 }
 
 

@@ -12,6 +12,7 @@ namespace LemonadeStand
         private int DurationGame;
         private int HoursOfOper;
         public weather weather;
+        public string DayOfWeek;
         public string Days;
 
         //constructor (build this thing)(constructor initializes our variables)

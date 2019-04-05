@@ -25,8 +25,8 @@ namespace LemonadeStand
             recipe.ChangeRecipe();
             recipe.DisplayCurrentRecipe();
 
-            day day = new day();
-            day.DisplayDay();
+            //day day = new day();
+            //day.DisplayDay();
 
             
             Console.ReadKey();

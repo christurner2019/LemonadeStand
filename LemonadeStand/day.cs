@@ -39,7 +39,7 @@ namespace LemonadeStand
                 Days.Add("Saturday");
                 Days.Add("Sunday");
 
-                //Console.WriteLine("Today is" + Days);
+                Console.WriteLine("Today is" + Days);
                 Days.ForEach(Console.WriteLine);
 
                 for (int i = 0; i < 7; i++);

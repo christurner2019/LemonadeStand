@@ -23,9 +23,10 @@ namespace LemonadeStand
 
         public void ChangeRecipe()
         {
-            Console.WriteLine("Do you want to change the recipe? yes or no.");
+            Console.WriteLine("Do you want to change the recipe? YES or NO.");
             string RecipeAnswer = Console.ReadLine();
-            
+            string choice = RecipeAnswer.ToUpper();
+
 
             if (RecipeAnswer == "yes")
             {

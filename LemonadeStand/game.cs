@@ -39,7 +39,7 @@ namespace LemonadeStand
                             "making smart choices with your inventory and tweaking your recipe so it is popular with your customers. You will need to " +
                             "monitor the weather as well and base your inventory on the current weather. You will purchase inventory before every new work day " +
                             "can start. Pay attention to what works and adjust accordingly. Go make some money!!");
-
+            Console.WriteLine("\r\nThe 7 day forecast is as follows:");
             day day = new day();
             day.DisplayDay();
 
@@ -92,10 +92,8 @@ namespace LemonadeStand
                 Days.Add(day);
                 Days[i].RunDay();
 
-                Console.WriteLine("Today is: " + day.DayOfWeek + "." );
-                day.weather.GetDaysWeather();
-                
-                
+                Console.WriteLine("\r\nToday is: " + day.DayOfWeek + "." );
+                day.weather.GetDaysWeather();             
                 Console.ReadLine();
 
                 //for (int i = 0; i < Days.Count; i++)

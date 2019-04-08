@@ -27,7 +27,7 @@ namespace LemonadeStand
         public void DisplayDay()
         {
             {
-                List<string> Days = new List<string>() { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
+                List<string> Days = new List<string>() { "Monday: ", "Tuesday: ", "Wednesday: ", "Thursday: ", "Friday: ", "Saturday: ", "Sunday: " };
 
                // DateTime now = DateTime.Today;
                 for (int i = 0; i < 7; i++)

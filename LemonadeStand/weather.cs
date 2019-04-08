@@ -19,6 +19,8 @@ namespace LemonadeStand
         private List<string> WeatherType1;
         string totalWeather;
 
+        public string Temperature { get; internal set; }
+
         //constructor (build this thing)(constructor initializes our variables)ge
         public weather()
         {
@@ -33,34 +35,32 @@ namespace LemonadeStand
 
         //member methods
       
-        public void GetWeatherType()
+        public void GetWeatherType(Random rng)
         {
-            Random rng = new Random();
             condition = WeatherType1[rng.Next(0, 3)];
         }
-        public void SetTemp()
+        public void SetTemp(Random rng)
         {
-            Random rng = new Random();
             todaysTemp = rng.Next(lowerTempRange, UpperTempRange);
         }
 
      
 
-        public string GetDaysWeather()
+        public string GetDaysWeather(Random rng)
         {
-            GetWeatherType();
-            SetTemp();
+            GetWeatherType(rng);
+            SetTemp(rng);
             totalWeather = ("The weather will be " + condition + " and the temperature will be " + todaysTemp + ".");
             return totalWeather;
             //string weatherStatement = "The weather will be " + condition + " The temperature will be " + todaysTemp;
             //return weatherStatement;
         }
 
-        public void DisplayForecastWeatherWeek()
+        public void DisplayForecastWeatherWeek(Random rng)
         {
             for (int i = 0; i < 7; i++)
             {
-                GetDaysWeather();
+                GetDaysWeather(rng);
             }
         }
 

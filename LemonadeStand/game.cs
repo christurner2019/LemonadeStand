@@ -12,6 +12,7 @@ namespace LemonadeStand
         public player Player;
         public customer Customer;
         public store Store;
+        public Random rng;
        
 
 
@@ -21,7 +22,7 @@ namespace LemonadeStand
 
         public Game()
         {
-
+            rng = new Random();
 
 
 
@@ -41,7 +42,7 @@ namespace LemonadeStand
                             "can start. Pay attention to what works and adjust accordingly. Go make some money!!");
             Console.WriteLine("\r\nThe 7 day forecast is as follows:");
             day day = new day();
-            day.DisplayDay();
+            day.DisplayDay(rng);
 
             BuildDays();
             
@@ -92,8 +93,10 @@ namespace LemonadeStand
                 Days.Add(day);
                 Days[i].RunDay();
 
-                Console.WriteLine("\r\nToday is: " + day.DayOfWeek + "." );
-                day.weather.GetDaysWeather();             
+                string actualWeather = day.weather.GetDaysWeather(rng);
+
+                Console.WriteLine("\r\nToday is " + day.DayOfWeek + ": " + actualWeather);
+                // Console.WriteLine(actualWeather);
                 Console.ReadLine();
 
                 //for (int i = 0; i < Days.Count; i++)

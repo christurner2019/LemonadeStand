@@ -24,7 +24,7 @@ namespace LemonadeStand
 
           
 
-        public void DisplayDay()
+        public void DisplayDay(Random rng)
         {
             {
                 List<string> Days = new List<string>() { "Monday: ", "Tuesday: ", "Wednesday: ", "Thursday: ", "Friday: ", "Saturday: ", "Sunday: " };
@@ -32,10 +32,9 @@ namespace LemonadeStand
                // DateTime now = DateTime.Today;
                 for (int i = 0; i < 7; i++)
                 {
-                    string result = weather.GetDaysWeather();
+                    string result = weather.GetDaysWeather(rng);
                     Console.WriteLine(Days[i] + result);
-                    //call next function
-                    //call next function
+                   
                 }
                 
                 
